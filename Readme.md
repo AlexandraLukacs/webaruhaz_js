@@ -24,7 +24,7 @@ Megjeleníti a kártyát.
 Rendezi kártyákat név szerint.
 
 **szures(lista, szurtSzoveg) -> szurtLista**
-Szűri a kártyákat a beírt karakter(ek) szerint és keresni fog a név, leírás és kategória mezőkben.
+Szűri a kártyákat a beírt karakter(ek) szerint és keresni fog a név és kategória mezőkben.
 
 **kosarGomb(termekIndex) -> lista**
 Kosár listába teszi a terméket a Kosárba gomb megnyomásával.

@@ -25,11 +25,19 @@
             </ul>
         </nav>
         <article>
-            <div id="rendezo"></div>
-            <div id="szuro">
-                <label for="szNev" class="form-label"></label>
-                <input type="text" class="form-control" id="szNev" placeholder="Szűrőmező" name="szNev">
-            </div>
+            <form action="/action_page.php">
+                <div id="rendezo">
+                    <select id="rendez" name="nev">
+                        <option value="termekek">Termékek rendezése</option>
+                        <option value="nev">Név szerint a-z</option>
+                    </select>
+                </div>
+                <div id="szuro">
+                    <label for="szNev" class="form-label"></label>
+                    <input type="text" class="form-control" id="szNev" placeholder="Szűrőmező" name="szNev">
+                </div>
+            </form>
+            <div id="kartya"></div>
         </article>
         <footer></footer>
     </main>
