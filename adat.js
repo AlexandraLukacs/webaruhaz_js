@@ -1,14 +1,14 @@
 export const jatekokLISTA = [
     {
-        nev: "Dínós plüss",
-        kep: "kepek/dino.jpg",
-        ar: 2200,
-        kategoria: "kutyajáték"
-    },
-    {
         nev: "Nasi labda",
         kep: "kepek/nasilabda.webp",
         ar: 3000,
+        kategoria: "kutyajáték"
+    },
+    {
+        nev: "Dínós plüss",
+        kep: "kepek/dino.jpg",
+        ar: 2200,
         kategoria: "kutyajáték"
     },
     {

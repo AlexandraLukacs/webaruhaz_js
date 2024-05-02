@@ -16,25 +16,6 @@ nav {
     background-color: rgba(240, 116, 123, 1);
 }
 
-nav ul li a {
-    color: rgba(67, 6, 88, 1);
-}
-
 main {
     background-color: rgba(247, 7, 94, 0.4);
-}
-
-#rendszur {
-    display: flex;
-    padding: 10px;
-    gap: 10px;
-}
-
-#kartya {
-    padding: 20px;
-}
-
-#card {
-    background-color: rgba(217, 217, 217, 1);
-    display: flex;
 }
