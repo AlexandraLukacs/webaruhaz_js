@@ -73,6 +73,6 @@ export function kosarGomb(termekIndex){
     kosarELEM.on("click", function(event){
         termekIndex = event.target.id;
         const LISTA = kosarLISTA.append(termekIndex);
-        
+        //
     });
 }
