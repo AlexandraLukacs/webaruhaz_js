@@ -17,25 +17,26 @@
         <header>
             <h1>ÉdiShop</h1>
         </header>
-        <nav class="navbar navbar-expand-sm">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" href="index.html" style="color: rgba(67, 6, 88, 1);">Termékeink</a></li>
-                <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="kosar.html" style="color: rgba(67, 6, 88, 1);">Kosár</a></li>
-                <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#" style="color: rgba(67, 6, 88, 1);">Személyes adatok</a></li>
-                <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#" style="color: rgba(67, 6, 88, 1);">Admin</a></li> 
+        <nav class="navbar navbar-expand">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link active" style="color: rgba(67, 6, 88, 1);" href="index.html">Termékeink</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: rgba(67, 6, 88, 1);" href="kosar.html">Kosár</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: rgba(67, 6, 88, 1);" href="#">Személyes adatok</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: rgba(67, 6, 88, 1);" href="#">Admin</a></li> 
             </ul>
         </nav>
-        <article>
-            <div class="row">
-                <select id="rendez" name="rendezo" class="col-sm-4" style="height: 40px; width: 200px;">
-                    <option value="termekek">Termékek rendezése</option>
-                    <option value="nev">Név szerint a-z</option>
-                    <option value="ar">Ár szerint növekvőbe</option>
-                    <option value="kategoria">Kategória szerint a-z</option>
-                </select>
-                <div id="szuro" class="col-sm-4">
+        <article class="container">
+            <div class="row" id="rendezSzur">
+                    <select id="rendez" class="form-select form-select-sm" style="max-width: 200px;">
+                        <option value="alap">Termékek rendezése</option>
+                        <option value="nev">Név szerint a-z</option>
+                        <option value="arn">Ár szerint növekvőbe</option>
+                        <option value="arcs">Ár szerint csökkenőbe</option>
+                        <option value="kategoria">Kategória szerint a-z</option>
+                    </select>
+                <div id="szuro" class="d-flex" style="max-width: 200px;">
                     <label for="szNev" class="form-label"></label>
-                    <input type="text" class="form-control" id="szNev" placeholder="Szűrőmező" name="szNev">
+                    <input type="text" class="form-control" id="szNev" placeholder="Szűrőmező" name="szNev" style="height: 40px; width: 200px;">
                 </div>
             </div>
             <div id="kartya"></div>

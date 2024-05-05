@@ -1,6 +1,6 @@
 import { kartyaOsszeallit, megjelenites } from "./fuggvenyek.js";
 
-export function tablazatRendezNev(lista){
+export function kartyaRendezNev(lista){
     const nevSzerintELEM = $("#rendez");
     nevSzerintELEM.on("change", function(){
         if(nevSzerintELEM.val() === "nev"){
@@ -18,11 +18,11 @@ function rendezesNev(lista){
     return lista;
 }
 
-export function tablazatRendezAr(lista){
+export function kartyaRendezArNov(lista){
     const arSzerintiELEM = $("#rendez");
     arSzerintiELEM.on("change", function(){
-        if(arSzerintiELEM.val() === "ar"){
-            rendezesAr(lista);
+        if(arSzerintiELEM.val() === "arn"){
+            rendezesArN(lista);
             console.log(lista)
             megjelenites(kartyaOsszeallit(lista));
         }
@@ -30,14 +30,33 @@ export function tablazatRendezAr(lista){
    
 }
 
-function rendezesAr(lista){
+function rendezesArN(lista){
     lista.sort(function(a,b){
         return a.ar - b.ar;
     });
     return lista;
 }
 
-export function tablazatRendezKategoria(lista){
+export function kartyaRendezArCsok(lista){
+    const arSzerintiELEM = $("#rendez");
+    arSzerintiELEM.on("change", function(){
+        if(arSzerintiELEM.val() === "arcs"){
+            rendezesArCs(lista);
+            console.log(lista)
+            megjelenites(kartyaOsszeallit(lista));
+        }
+    });
+   
+}
+
+function rendezesArCs(lista){
+    lista.sort(function(a,b){
+        return b.ar - a.ar;
+    });
+    return lista;
+}
+
+export function kartyaRendezKategoria(lista){
     const kategSzerintELEM = $("#rendez");
     kategSzerintELEM.on("change", function(){
         if(kategSzerintELEM.val() === "kategoria"){
@@ -64,15 +83,9 @@ export function szuresNevSzerint(lista, szurtSzoveg){
     return SZURTLISTA;
 }
 
-
-
-const kosarLISTA = [];
-
-export function kosarGomb(termekIndex){
-    const kosarELEM = $("#kosar");
-    kosarELEM.on("click", function(event){
-        termekIndex = event.target.id;
-        const LISTA = kosarLISTA.append(termekIndex);
-        //
+export function szuresKategoriaSzerint(lista, szurtSzoveg){
+    const SZURTLISTA = lista.filter(function(elem){
+        return elem.kategoria.includes(szurtSzoveg);
     });
+    return SZURTLISTA;
 }
