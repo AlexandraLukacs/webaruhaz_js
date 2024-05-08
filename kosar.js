@@ -1,10 +1,28 @@
-const kosarLISTA = [];
+import { jatekokLISTA } from "./adat.js";
+import { kosarLISTA } from "./kosarlista.js";
 
-export function kosarGomb(termekIndex){
-    const kosarELEM = $("#kosar");
-    kosarELEM.on("click", function(event){
-        termekIndex = event.target.id;
-        const LISTA = kosarLISTA.append(termekIndex);
-        //
+export function kosarTartalomOsszeallit(lista){
+    let txt = "";
+    lista.forEach(element => {
+        txt += `<div>`;
+        txt += `<p>${element.nev}</p>`;
+        txt += `<p>${element.ar}Ft</p>`;
+        txt += `</div>`;
     });
+    return txt;
+}
+
+export function kosarGomb(){
+    const kosarELEM = $(".kosar");
+    kosarELEM.on("click", function(event){
+        const termekIndex = event.target.id;
+        kosarLISTA.push(jatekokLISTA[termekIndex]);
+        kosarInit(kosarLISTA);
+    });
+}
+
+export function kosarInit(lista){
+    const tartalom = kosarTartalomOsszeallit(lista);
+    const tartalomELEM = $(".kosarTartalom");
+    tartalomELEM.html(tartalom);
 }

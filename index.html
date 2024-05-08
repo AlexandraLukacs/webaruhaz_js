@@ -13,19 +13,18 @@
     <title>Lukács Alexandra</title>
 </head>
 <body class="container">
-    <main>
-        <header>
+    <main class="row">
+        <header class="col-sm-12">
             <h1>ÉdiShop</h1>
         </header>
-        <nav class="navbar navbar-expand">
+        <nav class="navbar navbar-expand col-sm-12">
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link active" style="color: rgba(67, 6, 88, 1);" href="index.html">Termékeink</a></li>
-                <li class="nav-item"><a class="nav-link" style="color: rgba(67, 6, 88, 1);" href="kosar.html">Kosár</a></li>
                 <li class="nav-item"><a class="nav-link" style="color: rgba(67, 6, 88, 1);" href="#">Személyes adatok</a></li>
                 <li class="nav-item"><a class="nav-link" style="color: rgba(67, 6, 88, 1);" href="#">Admin</a></li> 
             </ul>
         </nav>
-        <article class="container">
+        <article class="container col-sm-9">
             <div class="row" id="rendezSzur">
                     <select id="rendez" class="form-select form-select-sm" style="max-width: 200px;">
                         <option value="alap">Termékek rendezése</option>
@@ -41,6 +40,14 @@
             </div>
             <div id="kartya"></div>
         </article>
+        <aside id="kosarba" class="col-sm-3">
+            <h5>Kosárba lévő termékek:</h5>
+            <div class="kosarTartalom"></div>
+            <div>
+                <p>Fizetendő:</p>
+            </div>
+            <button>Rendelés</button>
+        </aside>
         <footer></footer>
     </main>
 </body>

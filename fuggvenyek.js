@@ -1,6 +1,6 @@
 export function kartyaOsszeallit(lista){
     let txt = "";
-    txt += `<div class=" class=container mt-3 row">`;
+    txt += `<div class="container m-3 row d-flex justify-content-around">`;
     lista.forEach((element, i) => {
         txt += `<div class="card" style="width:400px">`;
         txt += `<div class="card-head"><img src="${element.kep}" alt="Card image" style="width:50%"></div>`;
@@ -8,7 +8,7 @@ export function kartyaOsszeallit(lista){
         txt += `<h4 class="card-title">${element.nev}</h4>`;
         txt += `<p class="card-text">${element.ar}Ft</p>`;
         txt += `<p class="card-text">Kategória: ${element.kategoria}</p>`;
-        txt += `<button id="kosar" type="button" class="btn btn-default">Kosárba</button>`;
+        txt += `<button id="${i}" type="button" class="kosar btn btn-default">Kosárba</button>`;
         txt += `</div>`;
         txt += `</div>`;
     });

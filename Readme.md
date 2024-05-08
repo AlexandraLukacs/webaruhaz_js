@@ -20,10 +20,22 @@
 **megjelenites(txt)**
 Megjeleníti a kártyát.
 
-**kartyaRendez(lista) -> rendezLista**
+**kartyaRendezNev(lista) -> rendezLista**
 Rendezi kártyákat név szerint.
 
-**szures(lista, szurtSzoveg) -> szurtLista**
+**kartyaRendezArNov(lista) -> rendezLista**
+Rendezi kártyákat ár szerint növekvőbe.
+
+**kartyaRendezArCsok(lista) -> rendezLista**
+Rendezi kártyákat ár szerint csökkenőbe.
+
+**kartyaRendezKategoria(lista) -> rendezLista**
+Rendezi kártyákat kategória szerint.
+
+**szuresNevSzerint(lista, szurtSzoveg) -> szurtLista**
+Szűri a kártyákat a beírt karakter(ek) szerint és keresni fog a név és kategória mezőkben.
+
+**szuresKategoriaSzerint(lista, szurtSzoveg) -> szurtLista**
 Szűri a kártyákat a beírt karakter(ek) szerint és keresni fog a név és kategória mezőkben.
 
 **kosarGomb(termekIndex) -> lista**

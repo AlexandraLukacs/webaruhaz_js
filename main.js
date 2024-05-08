@@ -1,9 +1,12 @@
 import { jatekokLISTA } from "./adat.js";
 import { szuresNevSzerint, szuresKategoriaSzerint, kartyaRendezArNov, kartyaRendezKategoria, kartyaRendezNev, kartyaRendezArCsok } from "./adatkezelo.js";
 import { kartyaOsszeallit, megjelenites } from "./fuggvenyek.js";
+import { kosarGomb, kosarTartalomOsszeallit } from "./kosar.js";
+import { kosarLISTA } from "./kosarlista.js";
 
 init(jatekokLISTA);
 rendezesekSzuresek();
+kosarGomb();
 
 export function init(lista){
     const txt = kartyaOsszeallit(lista);
@@ -16,7 +19,7 @@ function rendezesekSzuresek(){
     kartyaRendezArCsok(jatekokLISTA);
     kartyaRendezKategoria(jatekokLISTA);
     nevSzuresEsemeny();
-    KategoriaSzuresEsemeny();
+    //KategoriaSzuresEsemeny();
 }
 
 kosarGomb(jatekokLISTA);
@@ -24,8 +27,8 @@ kosarGomb(jatekokLISTA);
 function nevSzuresEsemeny(){
     const szuroELEM = $("#szNev");
     szuroELEM.on("keyup", function(){
-        let szuroSZoveg = szuroELEM.val();
-       const LISTA = szuresNevSzerint(jatekokLISTA, szuroSZoveg);
+        let szuroSzoveg = szuroELEM.val();
+       const LISTA = szuresNevSzerint(jatekokLISTA, szuroSzoveg);
        init(LISTA);
     });
 }
@@ -33,8 +36,8 @@ function nevSzuresEsemeny(){
 function KategoriaSzuresEsemeny(){
     const szuroELEM = $("#szNev");
     szuroELEM.on("keyup", function(){
-        let szuroSZoveg = szuroELEM.val();
-       const LISTA = szuresKategoriaSzerint(jatekokLISTA, szuroSZoveg);
+        let szuroSzoveg = szuroELEM.val();
+       const LISTA = szuresKategoriaSzerint(jatekokLISTA, szuroSzoveg);
        init(LISTA);
     });
 }

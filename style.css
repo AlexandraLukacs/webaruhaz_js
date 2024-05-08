@@ -20,19 +20,22 @@ main {
     background-color: rgba(247, 7, 94, 0.4);
 }
 
-.card {
-    display: flex;
-}
-
-#kartya {
-    padding: 45px;
-    padding-top: 0px;
-}
-
 #rendezSzur {
     padding: 10px;
 }
 
 #kosar{
     border: 1px solid pink;
+}
+
+aside {
+    background-color: rgba(139, 25, 80);
+    color: black;
+    padding: 10px;
+}
+
+aside h5 {
+    background-color: rgb(217, 217, 217);
+    height: 40px;
+    text-align: center;
 }
