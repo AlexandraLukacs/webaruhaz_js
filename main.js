@@ -22,8 +22,6 @@ function rendezesekSzuresek(){
     //KategoriaSzuresEsemeny();
 }
 
-kosarGomb(jatekokLISTA);
-
 function nevSzuresEsemeny(){
     const szuroELEM = $("#szNev");
     szuroELEM.on("keyup", function(){
